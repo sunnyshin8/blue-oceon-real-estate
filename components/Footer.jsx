@@ -6,7 +6,7 @@ export default function Footer() {
     <footer
       className="text-white"
       style={{
-        background: "linear-gradient(90deg,rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%)",
+        background: "radial-gradient(circle,rgba(99, 124, 224, 1) 0%, rgba(130, 180, 237, 1) 100%);",
       }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">

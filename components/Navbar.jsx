@@ -12,7 +12,7 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-16">
           {/* Left: Logo */}
           <div className="flex items-center">
-            <Image src="/logo.png" alt="RealEstate" width={36} height={36} className="mr-2" />
+            <Image src="/images/logo.png" alt="RealEstate" width={100} height={100} className="mr-2" />
             <span className="text-2xl font-bold text-white">RealEstate</span>
           </div>
 
@@ -31,7 +31,7 @@ export default function Navbar() {
 
             <button
               onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-              className="text-white hover:text-gray-200 text-2xl focus:outline-none"
+              className="text-white hover:text-gray-200 text-3xl focus:outline-none top-8"
             >
               <ion-icon name="reorder-four-outline"></ion-icon>
             </button>

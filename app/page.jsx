@@ -15,13 +15,13 @@ export default function Home() {
   return (
     <div className="relative flex flex-col gap-20">
       {/* Ionicon Button with Dropdown */}
-      <div className="absolute top-4 right-4 z-50">
-        <button
+      <button
           onClick={() => setDropdownOpen(!dropdownOpen)}
-          className="bg-pink-400 text-white p-3 rounded-full shadow-lg hover:bg-pink-500 transition"
+          className="bg-gray-400 text-white p-3 rounded-full shadow-lg hover:bg-gray-500 transition"
         >
           <ion-icon name="reorder-four-outline" size="large"></ion-icon>
         </button>
+      <div className="absolute top-4 right-4 z-50">
 
         {dropdownOpen && (
           <div
