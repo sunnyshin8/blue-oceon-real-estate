@@ -17,20 +17,21 @@ export default function Register() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+    // Handle form submission (API call or validation)
     alert('Registration submitted!')
   }
 
   return (
     <div
-      className="min-h-screen w-full flex items-center justify-center px-4 py-10 md:px-6 lg:px-8 bg-[#729FF2]"
+      className="min-h-screen w-full flex items-center justify-center bg-[#729FF2] overflow-auto pt-24 pb-8"
     >
-      <div className="bg-white rounded-3xl shadow-2xl p-6 sm:p-10 md:p-12 w-full max-w-xl border border-[#729FF2] transition-all duration-300">
-        <h2 className="text-4xl font-extrabold mb-10 text-center text-[#2B477B] tracking-wide drop-shadow-lg">
+      <div className="bg-white rounded-3xl shadow-2xl px-2 sm:px-4 md:px-6 py-6 sm:py-8 w-full max-w-md mx-2 border border-[#729FF2] transition-all duration-300">
+        <h2 className="text-2xl sm:text-3xl font-extrabold mb-6 text-center text-[#2B477B] tracking-wide drop-shadow-lg">
           Registration Form
         </h2>
-        <form onSubmit={handleSubmit} className="space-y-7">
+        <form onSubmit={handleSubmit} className="space-y-3">
           <div>
-            <label className="block text-[#2B477B] mb-2 font-semibold text-lg">Name</label>
+            <label className="block text-[#2B477B] mb-1 font-semibold text-base">Name</label>
             <input
               type="text"
               name="name"
@@ -38,11 +39,11 @@ export default function Register() {
               onChange={handleChange}
               required
               placeholder="Enter your name"
-              className="w-full px-5 py-3 border border-[#729FF2] rounded-xl focus:outline-none focus:ring-2 focus:ring-[#729FF2] text-[#2B477B] bg-[#f7faff] placeholder-gray-400 transition"
+              className="w-full px-4 py-2 border border-[#729FF2] rounded-xl focus:outline-none focus:ring-2 focus:ring-[#729FF2] text-[#2B477B] bg-[#f7faff] placeholder-gray-400 transition"
             />
           </div>
           <div>
-            <label className="block text-[#2B477B] mb-2 font-semibold text-lg">Mobile</label>
+            <label className="block text-[#2B477B] mb-1 font-semibold text-base">Mobile</label>
             <input
               type="tel"
               name="mobile"
@@ -50,36 +51,34 @@ export default function Register() {
               onChange={handleChange}
               required
               placeholder="Enter your mobile number"
-              className="w-full px-5 py-3 border border-[#729FF2] rounded-xl focus:outline-none focus:ring-2 focus:ring-[#729FF2] text-[#2B477B] bg-[#f7faff] placeholder-gray-400 transition"
+              className="w-full px-4 py-2 border border-[#729FF2] rounded-xl focus:outline-none focus:ring-2 focus:ring-[#729FF2] text-[#2B477B] bg-[#f7faff] placeholder-gray-400 transition"
             />
           </div>
           <div>
-            <label className="block text-[#2B477B] mb-2 font-semibold text-lg">Email</label>
+            <label className="block text-[#2B477B] mb-1 font-semibold text-base">Email</label>
             <input
               type="email"
               name="email"
               value={form.email}
               onChange={handleChange}
-              required
               placeholder="Enter your email"
-              className="w-full px-5 py-3 border border-[#729FF2] rounded-xl focus:outline-none focus:ring-2 focus:ring-[#729FF2] text-[#2B477B] bg-[#f7faff] placeholder-gray-400 transition"
+              className="w-full px-4 py-2 border border-[#729FF2] rounded-xl focus:outline-none focus:ring-2 focus:ring-[#729FF2] text-[#2B477B] bg-[#f7faff] placeholder-gray-400 transition"
             />
           </div>
           <div>
-            <label className="block text-[#2B477B] mb-2 font-semibold text-lg">Affiliated</label>
+            <label className="block text-[#2B477B] mb-1 font-semibold text-base">Affiliated</label>
             <input
               type="text"
               name="affiliated"
               value={form.affiliated}
               onChange={handleChange}
-              required
               placeholder="Affiliated organization"
-              className="w-full px-5 py-3 border border-[#729FF2] rounded-xl focus:outline-none focus:ring-2 focus:ring-[#729FF2] text-[#2B477B] bg-[#f7faff] placeholder-gray-400 transition"
+              className="w-full px-4 py-2 border border-[#729FF2] rounded-xl focus:outline-none focus:ring-2 focus:ring-[#729FF2] text-[#2B477B] bg-[#f7faff] placeholder-gray-400 transition"
             />
           </div>
           <div>
-            <label className="block text-[#2B477B] mb-2 font-semibold text-lg">Certified</label>
-            <div className="flex space-x-10 mt-1">
+            <label className="block text-[#2B477B] mb-1 font-semibold text-base">Certified</label>
+            <div className="flex space-x-6 mt-1">
               <label className="flex items-center text-[#2B477B] font-medium cursor-pointer">
                 <input
                   type="radio"
@@ -87,10 +86,9 @@ export default function Register() {
                   value="yes"
                   checked={form.certified === 'yes'}
                   onChange={handleChange}
-                  required
-                  className="accent-[#729FF2] w-5 h-5"
+                  className="accent-[#729FF2] w-4 h-4"
                 />
-                <span className="ml-2 text-lg">Yes</span>
+                <span className="ml-2 text-base">Yes</span>
               </label>
               <label className="flex items-center text-[#2B477B] font-medium cursor-pointer">
                 <input
@@ -100,15 +98,15 @@ export default function Register() {
                   checked={form.certified === 'no'}
                   onChange={handleChange}
                   required
-                  className="accent-[#729FF2] w-5 h-5"
+                  className="accent-[#729FF2] w-4 h-4"
                 />
-                <span className="ml-2 text-lg">No</span>
+                <span className="ml-2 text-base">No</span>
               </label>
             </div>
           </div>
           <button
             type="submit"
-            className="w-full bg-gradient-to-r from-[#729FF2] to-[#2B477B] text-white py-3 rounded-xl font-bold text-lg shadow-lg hover:from-[#4a7bd4] hover:to-[#1d2e4a] transition-all duration-200"
+            className="w-full bg-gradient-to-r from-[#729FF2] to-[#2B477B] text-white py-2 rounded-xl font-bold text-base shadow-lg hover:from-[#4a7bd4] hover:to-[#1d2e4a] transition-all duration-200"
           >
             Register
           </button>
