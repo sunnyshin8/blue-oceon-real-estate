@@ -42,7 +42,7 @@ export default function Navbar() {
                 <Link href="/enquiry" className="block px-4 py-2 hover:bg-gray-100">Enquiry</Link>
                 <Link href="/contact" className="block px-4 py-2 hover:bg-gray-100">Contact Us</Link>
                 <Link href="/register" className="block px-4 py-2 hover:bg-gray-100">Register</Link>
-                <Link href="/about" className="block px-4 py-2 hover:bg-gray-100">About Us</Link>
+                <Link href="/aboutus" className="block px-4 py-2 hover:bg-gray-100">About Us</Link>
               </div>
             )}
           </div>
