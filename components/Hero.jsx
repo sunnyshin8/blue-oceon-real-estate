@@ -1,26 +1,28 @@
-'use client'
-import { useState } from 'react'
-import Image from 'next/image'
+'use client';
+import { useState } from 'react';
+import Image from 'next/image';
 
 export default function Hero() {
-  const [searchQuery, setSearchQuery] = useState('')
+  const [searchQuery, setSearchQuery] = useState('');
 
   return (
-    <div className="relative h-screen">
-      {/* Background Image */}
-      <div className="absolute inset-0">
+    <div className="relative h-screen w-full overflow-hidden">
+      {/* Background Debug Wrapper */}
+      <div className="absolute inset-0 -z-10 bg-red-500"> {/* Red fallback */}
         <Image
-          src="/images/hero-house.jpg"
+          src="/images/home.jpg"
           alt="Luxury Home"
           fill
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-black bg-opacity-50" />
       </div>
 
+      {/* Overlay */}
+      <div className="absolute inset-0 -z-10 bg-black bg-opacity-50" />
+
       {/* Hero Content */}
-      <div className="relative h-full flex items-center">
+      <div className="relative h-full flex items-center z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="text-center md:text-left max-w-3xl">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -67,5 +69,5 @@ export default function Hero() {
         </div>
       </div>
     </div>
-  )
-} 
+  );
+}
