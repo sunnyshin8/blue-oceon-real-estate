@@ -13,7 +13,7 @@ export default function Home() {
   const [dropdownOpen, setDropdownOpen] = useState(false)
 
   return (
-    <div className="relative flex flex-col gap-20">
+    <div className="relative flex flex-col">
       {/* Ionicon Button with Dropdown */}
       <button
           onClick={() => setDropdownOpen(!dropdownOpen)}
