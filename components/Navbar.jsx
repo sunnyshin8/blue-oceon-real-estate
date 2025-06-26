@@ -31,17 +31,19 @@ export default function Navbar() {
           <div className="relative flex items-center space-x-4">
             <Link href="/" className="text-white hover:text-gray-200">Home</Link>
 
-            {/* Google Translate Dropdown */}
-            <div className="hidden md:block">
-              <GoogleTranslate />
-            </div>
-
             <button
               onClick={() => setIsDropdownOpen(!isDropdownOpen)}
               className="text-white hover:text-gray-200 text-3xl focus:outline-none top-8"
             >
               <ion-icon name="reorder-four-outline"></ion-icon>
             </button>
+            
+            {/* Google Translate Dropdown */}
+            <div className="hidden md:block">
+              <GoogleTranslate />
+            </div>
+
+            
 
             {/* Dropdown Menu */}
             {isDropdownOpen && (
