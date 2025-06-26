@@ -2,6 +2,9 @@
 import Link from 'next/link'
 import { useState } from 'react'
 import Image from 'next/image'
+import dynamic from 'next/dynamic'
+
+const GoogleTranslate = dynamic(() => import('./Language'), { ssr: false })
 
 export default function Navbar() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false)
@@ -22,12 +25,16 @@ export default function Navbar() {
             <Link href="/services" className="text-white hover:text-gray-200">Services</Link>
             <Link href="/projects" className="text-white hover:text-gray-200">Projects</Link>
             <Link href="/blog" className="text-white hover:text-gray-200">Blog</Link>
-            {/* <Link href="/contact" className="text-white hover:text-gray-200">Contact</Link> */}
           </div>
 
-          {/* Right: Home + Dropdown */}
+          {/* Right: Home + Translate + Dropdown */}
           <div className="relative flex items-center space-x-4">
             <Link href="/" className="text-white hover:text-gray-200">Home</Link>
+
+            {/* Google Translate Dropdown */}
+            <div className="hidden md:block">
+              <GoogleTranslate />
+            </div>
 
             <button
               onClick={() => setIsDropdownOpen(!isDropdownOpen)}
