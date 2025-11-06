@@ -1,7 +1,4 @@
-'use client'
-
-import Image from 'next/image'
-import React from 'react'
+import Image from 'next/image';
 
 export default function Aboutus() {
   return (
@@ -32,7 +29,7 @@ export default function Aboutus() {
         <div className="flex justify-center">
           <div className="w-60 h-60 rounded-full overflow-hidden border-4 border-white shadow-lg hover:scale-105 hover:rotate-1 transition-transform duration-500">
             <Image
-              src="/shailendra.jpg"
+              src="/shailendra.jpg" // place your image in public/shailendra.jpg
               alt="Mr. Shailendra Jaiswal"
               width={240}
               height={240}
@@ -69,5 +66,5 @@ export default function Aboutus() {
         </div>
       </div>
     </section>
-  )
+  );
 }

@@ -81,8 +81,8 @@ export default function AboutSection() {
         <h3 className="text-2xl font-bold mb-4 text-[#2B477B]">Our Vision</h3>
         <p className="text-lg leading-relaxed">
           Our vision is to become the region's most trusted real estate partner, known for exceptional
-          service, innovation, and integrity. We envision a future where every realty need—from buying a
-          home to expanding a commercial portfolio—is met with personalized, seamless solutions under one
+          service, innovation, and integrity. We envision a future where every realty need from buying a
+          home to expanding a commercial portfolio is met with personalized, seamless solutions under one
           roof, powered by modern technology and expert guidance.
         </p>
         <p className="text-lg leading-relaxed mt-4">

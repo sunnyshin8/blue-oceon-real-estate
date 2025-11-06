@@ -3,8 +3,9 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import Hero from '@/components/Hero'
-import AboutSection from '@/components/AboutSection'
 import ServicesSection from '@/components/ServicesSection'
+import AboutSection from '@/components/AboutSection'
+import Aboutus from '@/components/Aboutus'
 import ProjectShowcase from '@/components/ProjectShowcase'
 import BlogPreview from '@/components/BlogPreview'
 import InquireForm from '@/components/InquireForm'
@@ -14,7 +15,7 @@ export default function Home() {
 
   return (
     <div className="relative flex flex-col">
-      {/* Ionicon Button with Dropdown */}
+      
       <button
           onClick={() => setDropdownOpen(!dropdownOpen)}
           className="bg-gray-400 text-white p-3 rounded-full shadow-lg hover:bg-gray-500 transition"
@@ -59,8 +60,9 @@ export default function Home() {
       </div>
 
       <Hero />
-      <AboutSection />
       <ServicesSection />
+      <AboutSection />
+      <Aboutus />
       <ProjectShowcase />
       <BlogPreview />
       <InquireForm />

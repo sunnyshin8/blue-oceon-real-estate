@@ -4,9 +4,10 @@ import Link from 'next/link'
 export default function Footer() {
   return (
     <footer
-      className="text-white"
+      className="text-white border-t border-white/30"
       style={{
         background: "radial-gradient(circle,rgba(99, 124, 224, 1) 0%, rgba(130, 180, 237, 1) 100%);",
+        zIndex: 10,
       }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">

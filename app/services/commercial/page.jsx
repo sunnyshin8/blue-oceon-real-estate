@@ -1,10 +1,8 @@
 'use client'
 
-import { useState } from 'react'
 import Image from 'next/image'
 
 export default function CommercialPage() {
-  const [selectedImage, setSelectedImage] = useState(null)
 
   const commercialImages = [
     { src: '/images/commercial/IMG-20200617-WA0025.jpg', alt: 'Modern 5 star hotel stled  bedroom ', title: 'Modern 5 star hotel stled ' },
@@ -25,11 +23,51 @@ export default function CommercialPage() {
           }}
         >
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 drop-shadow-lg">
-            Commercial Real Estate Solutions
+            Commercial Real Estate Services
           </h1>
           <p className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto leading-relaxed drop-shadow-md">
             Tailored property services for commercial needs and investments. Explore our commercial projects and expertise.
           </p>
+        </section>
+
+        {/* Service Details Section */}
+        <section className="py-16 px-6 md:px-10 bg-white">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-8">
+              Commercial Real Estate Excellence
+            </h2>
+            <p className="text-lg text-gray-700 mb-12 max-w-4xl mx-auto text-center">
+              We specialize in commercial leasing, acquisition, and expansion for office, retail, and industrial spaces. With strategic site selection, market insights, and broker partnerships, we help businesses find spaces that accelerate growth.
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+              <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Commercial Property Search</h3>
+                <p className="text-gray-600">Comprehensive search and evaluation of available commercial properties matching your specific business requirements.</p>
+              </div>
+              <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Lease Negotiation & Portfolio Management</h3>
+                <p className="text-gray-600">Expert negotiation and ongoing portfolio management to optimize your commercial real estate investments.</p>
+              </div>
+              <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Market Analysis and Site Selection</h3>
+                <p className="text-gray-600">Strategic market research and site selection to identify optimal locations for business growth.</p>
+              </div>
+              <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Broker Network Collaboration for Faster Deals</h3>
+                <p className="text-gray-600">Leveraging our extensive broker network to accelerate deal completion and secure the best opportunities.</p>
+              </div>
+            </div>
+
+            <div className="text-center">
+              <a
+                href="/contact"
+                className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors shadow-lg inline-block text-lg"
+              >
+                Explore Commercial Solutions with Blue Ocean
+              </a>
+            </div>
+          </div>
         </section>
 
         {/* Project Gallery */}
@@ -42,8 +80,7 @@ export default function CommercialPage() {
               {commercialImages.map((image, index) => (
                 <div
                   key={index}
-                  className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg overflow-hidden border border-blue-200/50 transition-all duration-300 transform hover:scale-105 hover:shadow-xl cursor-pointer"
-                  onClick={() => setSelectedImage(image)}
+                  className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg overflow-hidden border border-blue-200/50 transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
                 >
                   <div className="relative h-64 overflow-hidden">
                     <Image
@@ -53,47 +90,11 @@ export default function CommercialPage() {
                       className="object-cover transition-transform duration-300 hover:scale-110"
                     />
                   </div>
-                  <div className="p-4">
-                    <h3 className="font-semibold text-gray-900 text-sm">{image.title}</h3>
-                  </div>
                 </div>
               ))}
             </div>
           </div>
         </section>
-
-        {/* Modal for Selected Image */}
-        {selectedImage && (
-          <div
-            className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4"
-            onClick={() => setSelectedImage(null)}
-          >
-            <div className="relative max-w-4xl max-h-full bg-white rounded-2xl overflow-hidden">
-              <button
-                onClick={() => setSelectedImage(null)}
-                className="absolute top-4 right-4 z-10 bg-white/90 hover:bg-white text-gray-900 rounded-full p-2 transition-colors"
-              >
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
-              <div className="relative">
-                <Image
-                  src={selectedImage.src}
-                  alt={selectedImage.alt}
-                  width={800}
-                  height={600}
-                  className="w-full h-auto"
-                  priority
-                />
-                <div className="p-6 bg-white/95 backdrop-blur-sm">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{selectedImage.title}</h3>
-                  <p className="text-gray-600">{selectedImage.alt}</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
 
         {/* Contact Section */}
         <section

@@ -1,10 +1,8 @@
 'use client'
 
-import { useState } from 'react'
 import Image from 'next/image'
 
 export default function InteriorPage() {
-  const [selectedImage, setSelectedImage] = useState(null)
 
   const interiorImages = [
     { src: '/images/interior/IMG_20210321_172051_876.jpg', alt: 'Modern Partition Design', title: 'Modern Partition Design' },
@@ -36,8 +34,48 @@ export default function InteriorPage() {
             Interior Design & Renovation
           </h1>
           <p className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto leading-relaxed drop-shadow-md">
-            Creative and functional design for all types of real estate. Transform your space with our expert interior solutions.
+            Transform your spaces with functional, inspiring designs that reflect your lifestyle and brand identity.
           </p>
+        </section>
+
+        {/* Service Details Section */}
+        <section className="py-16 px-6 md:px-10 bg-white">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-8">
+              Transform Your Spaces
+            </h2>
+            <p className="text-lg text-gray-700 mb-12 max-w-4xl mx-auto text-center">
+              Our interior design team creates functional, inspiring, aesthetic spaces that reflect your lifestyle and brand identity. From concept to completion, we handle every detail — from space planning to material selection — transforming homes and offices with creativity, smart design, and timeless elegance.
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+              <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Custom Design & Space Planning</h3>
+                <p className="text-gray-600">Tailored design solutions that maximize functionality while reflecting your personal style.</p>
+              </div>
+              <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Material Selection & Procurement</h3>
+                <p className="text-gray-600">Expert selection of high-quality materials, furniture, and finishes for lasting beauty.</p>
+              </div>
+              <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Renovation and Fit-out Execution</h3>
+                <p className="text-gray-600">Complete renovation services with skilled craftsmen ensuring perfect implementation.</p>
+              </div>
+              <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Project Optimization and Execution</h3>
+                <p className="text-gray-600">Streamlined project management ensuring timely completion within budget.</p>
+              </div>
+            </div>
+
+            <div className="text-center">
+              <a
+                href="/contact"
+                className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors shadow-lg inline-block text-lg"
+              >
+                Book a Design Consultation
+              </a>
+            </div>
+          </div>
         </section>
 
         {/* Project Gallery */}
@@ -50,8 +88,7 @@ export default function InteriorPage() {
               {interiorImages.map((image, index) => (
                 <div
                   key={index}
-                  className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg overflow-hidden border border-blue-200/50 transition-all duration-300 transform hover:scale-105 hover:shadow-xl cursor-pointer"
-                  onClick={() => setSelectedImage(image)}
+                  className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg overflow-hidden border border-blue-200/50 transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
                 >
                   <div className="relative h-64 overflow-hidden">
                     <Image
@@ -61,47 +98,11 @@ export default function InteriorPage() {
                       className="object-cover transition-transform duration-300 hover:scale-110"
                     />
                   </div>
-                  <div className="p-4">
-                    <h3 className="font-semibold text-gray-900 text-sm">{image.title}</h3>
-                  </div>
                 </div>
               ))}
             </div>
           </div>
         </section>
-
-        {/* Modal for Selected Image */}
-        {selectedImage && (
-          <div
-            className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4"
-            onClick={() => setSelectedImage(null)}
-          >
-            <div className="relative max-w-4xl max-h-full bg-white rounded-2xl overflow-hidden">
-              <button
-                onClick={() => setSelectedImage(null)}
-                className="absolute top-4 right-4 z-10 bg-white/90 hover:bg-white text-gray-900 rounded-full p-2 transition-colors"
-              >
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
-              <div className="relative">
-                <Image
-                  src={selectedImage.src}
-                  alt={selectedImage.alt}
-                  width={800}
-                  height={600}
-                  className="w-full h-auto"
-                  priority
-                />
-                <div className="p-6 bg-white/95 backdrop-blur-sm">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{selectedImage.title}</h3>
-                  <p className="text-gray-600">{selectedImage.alt}</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
 
         {/* Contact Section */}
         <section
