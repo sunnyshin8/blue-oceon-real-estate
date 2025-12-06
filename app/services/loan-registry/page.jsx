@@ -28,7 +28,7 @@ export default function LoanRegistry() {
             Loan & Registry Support
           </h1>
           <p className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto leading-relaxed drop-shadow-md">
-            Simplified financing and legal support with comprehensive mortgage and documentation assistance.
+            Simplified financing and legal support with comprehensive mortgage and documentation assistance
           </p>
         </section>
 
@@ -39,7 +39,7 @@ export default function LoanRegistry() {
               Simplified Financing & Legal Support
             </h2>
             <p className="text-lg text-gray-700 mb-12 max-w-4xl mx-auto text-center">
-              We simplify financing and legal processes with comprehensive support. Our experts guide clients through mortgage options and home loans, securing competitive rates and favorable terms. We also handle all property registration and documentation, ensuring transactions are transparent, compliant, and hassle-free.
+              We simplify financing and legal processes with comprehensive support. Our experts guide clients through mortgage options and home loans, securing competitive rates and favorable terms. We also handle all property register as partner and documentation, ensuring transactions are transparent, compliant, and hassle-free.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
@@ -52,8 +52,8 @@ export default function LoanRegistry() {
                 <p className="text-gray-600">Leverage our relationships with lenders to secure the best interest rates and terms.</p>
               </div>
               <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Documentation and Registration</h3>
-                <p className="text-gray-600">Complete handling of property documents, registration, and legal paperwork.</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Documentation and register as partner</h3>
+                <p className="text-gray-600">Complete handling of property documents, register as partner, and legal paperwork.</p>
               </div>
               <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Legal Compliance Support</h3>

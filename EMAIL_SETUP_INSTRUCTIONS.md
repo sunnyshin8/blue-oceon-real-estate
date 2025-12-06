@@ -16,7 +16,7 @@
 - Shows success/error messages
 - Disables button during submission
 
-### Registration Form (`/register`)
+### register as partner Form (`/register`)
 - Sends emails to: blueoceanbuildingsolutions@gmail.com
 - Includes: name, mobile, email, affiliated, certified status
 - Shows success/error messages
@@ -52,14 +52,14 @@ npm run dev
 
 ### 4. Test the Forms
 - Visit `/contact` and submit a test message
-- Visit `/register` and submit a test registration
+- Visit `/register` and submit a test register as partner
 - Check blueoceanbuildingsolutions@gmail.com for the emails
 
 ## 📁 Files Created/Modified:
 
 ### New Files:
 - `app/api/contact/route.js` - Contact form email handler
-- `app/api/register/route.js` - Registration form email handler
+- `app/api/register/route.js` - register as partner form email handler
 - `.env.local` - Environment variables (add to .gitignore!)
 
 ### Modified Files:

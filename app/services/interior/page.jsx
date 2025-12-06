@@ -34,7 +34,7 @@ export default function InteriorPage() {
             Interior Design & Renovation
           </h1>
           <p className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto leading-relaxed drop-shadow-md">
-            Transform your spaces with functional, inspiring designs that reflect your lifestyle and brand identity.
+            Transform your spaces with functional, inspiring designs that reflect your lifestyle and brand identity
           </p>
         </section>
 

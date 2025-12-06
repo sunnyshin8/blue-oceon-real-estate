@@ -28,7 +28,7 @@ export default function Consulting() {
             Real Estate Consulting & Due Diligence
           </h1>
           <p className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto leading-relaxed drop-shadow-md">
-            Data-backed insights and research-driven consulting for informed real estate decisions.
+            Data-backed insights and research-driven consulting for informed real estate decisions
           </p>
         </section>
 

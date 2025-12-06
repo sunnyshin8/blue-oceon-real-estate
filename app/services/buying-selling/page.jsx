@@ -30,7 +30,7 @@ export default function BuyingSelling() {
             Property Buying & Selling
           </h1>
           <p className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto leading-relaxed drop-shadow-md">
-            Expert guidance for buyers and sellers through every step of their real estate transaction.
+            Expert guidance for buyers and sellers through every step of their real estate transaction
           </p>
         </section>
 

@@ -28,7 +28,7 @@ export default function Hero() {
             transition={{ duration: 1 }}
             className="bg-gray-300 text-black font-bold text-5xl md:text-6xl px-6 py-4 shadow-md w-fit leading-tight"
           >
-            Turning Foundations<br />Into Fortunes.
+            Turning Foundation<br />Into Fortune
           </motion.h1>
 
           <motion.div

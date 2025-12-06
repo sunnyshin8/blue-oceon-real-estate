@@ -19,9 +19,9 @@ export async function POST(request) {
     const mailOptions = {
       from: process.env.EMAIL_USER,
       to: 'blueoceanbuildingsolutions@gmail.com',
-      subject: `New Registration: ${name}`,
+      subject: `New register as partner: ${name}`,
       html: `
-        <h2>New Property Registration</h2>
+        <h2>New Property register as partner</h2>
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Phone:</strong> ${phone}</p>
@@ -36,11 +36,11 @@ export async function POST(request) {
     await transporter.sendMail(mailOptions)
 
     return NextResponse.json(
-      { message: 'Registration email sent successfully' },
+      { message: 'register as partner email sent successfully' },
       { status: 200 }
     )
   } catch (error) {
-    console.error('Registration form error:', error)
+    console.error('register as partner form error:', error)
     return NextResponse.json(
       { error: 'Failed to send email' },
       { status: 500 }

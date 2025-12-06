@@ -73,7 +73,7 @@ export default function ConstructionPage() {
             Construction & Development
           </h1>
           <p className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto leading-relaxed drop-shadow-md">
-            Quality construction services from blueprints to finishing touches for residential and commercial projects.
+            Quality construction services from blueprints to finishing touches for residential and commercial projects
           </p>
         </section>
 
