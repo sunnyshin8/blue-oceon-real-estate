@@ -27,12 +27,12 @@ export default function Aboutus() {
 
         {/* Image */}
         <div className="flex justify-center">
-          <div className="w-102 h-102 rounded-full overflow-hidden border-4 border-white shadow-lg hover:scale-105 hover:rotate-1 transition-transform duration-500">
+          <div className="w-96 h-96 rounded-full overflow-hidden border-4 border-white shadow-lg hover:scale-105 hover:rotate-1 transition-transform duration-500">
             <Image
               src="/images/shailendra.jpeg" 
               alt="Mr. Shailendra Jaiswal"
-              width={240}
-              height={240}
+              width={384}
+              height={384}
               className="object-cover w-full h-full"
             />
           </div>
