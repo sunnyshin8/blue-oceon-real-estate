@@ -9,19 +9,41 @@ export default function ContactForm() {
     subject: '',
     message: '',
   })
+  const [status, setStatus] = useState('')
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    // Handle form submission here
-    console.log('Form submitted:', formData)
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      subject: '',
-      message: '',
-    })
+    setIsSubmitting(true)
+    setStatus('')
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+
+      if (response.ok) {
+        setStatus('success')
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          subject: '',
+          message: '',
+        })
+      } else {
+        setStatus('error')
+      }
+    } catch (error) {
+      console.error('Form submission error:', error)
+      setStatus('error')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleChange = (e) => {
@@ -52,7 +74,7 @@ export default function ContactForm() {
             </div>
             <div>
               <h3 className="text-lg font-medium text-gray-900">Phone</h3>
-              <p className="text-gray-600">(123) 456-7890</p>
+              <p className="text-gray-600">7898048917</p>
             </div>
           </div>
 
@@ -64,7 +86,7 @@ export default function ContactForm() {
             </div>
             <div>
               <h3 className="text-lg font-medium text-gray-900">Email</h3>
-              <p className="text-gray-600">info@realestate.com</p>
+              <p className="text-gray-600">blueoceanbuildingsolutions@gmail.com</p>
             </div>
           </div>
 
@@ -77,7 +99,7 @@ export default function ContactForm() {
             </div>
             <div>
               <h3 className="text-lg font-medium text-gray-900">Address</h3>
-              <p className="text-gray-600">123 Real Estate Street, City, State 12345</p>
+              <p className="text-gray-600">13-e, Tulsi Nagar Rd, Tulsi Nagar, Mahalaxmi Nagar, Indore, Madhya Pradesh 452010</p>
             </div>
           </div>
         </div>
@@ -159,11 +181,24 @@ export default function ContactForm() {
           />
         </div>
 
+        {status === 'success' && (
+          <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded">
+            Message sent successfully! We'll get back to you soon.
+          </div>
+        )}
+        
+        {status === 'error' && (
+          <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">
+            Failed to send message. Please try again or contact us directly.
+          </div>
+        )}
+
         <button
           type="submit"
-          className="w-full bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition-colors"
+          disabled={isSubmitting}
+          className="w-full bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
         >
-          Send Message
+          {isSubmitting ? 'Sending...' : 'Send Message'}
         </button>
       </form>
     </div>

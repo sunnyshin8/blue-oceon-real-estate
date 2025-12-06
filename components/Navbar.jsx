@@ -48,7 +48,7 @@ export default function Navbar() {
             {/* Dropdown Menu */}
             {isDropdownOpen && (
               <div className="absolute right-0 top-12 bg-white text-gray-800 rounded shadow-md py-2 w-40 z-50">
-                <Link href="/enquiry" className="block px-4 py-2 hover:bg-gray-100">Enquiry</Link>
+
                 <Link href="/contact" className="block px-4 py-2 hover:bg-gray-100">Contact Us</Link>
                 <Link href="/register" className="block px-4 py-2 hover:bg-gray-100">Register</Link>
                 <Link href="/aboutus" className="block px-4 py-2 hover:bg-gray-100">About Us</Link>

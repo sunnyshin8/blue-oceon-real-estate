@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800" role="img" aria-labelledby="title desc">
+  <title id="title">Gold's Gym logo</title>
+  <desc id="desc">Simplified vector recreation of the Gold's Gym logo</desc>
+  <defs>
+    <style>
+      .bg { fill: #f7d30a; }
+      .ring { fill: #000; }
+      .text { fill: #000; font-family: 'Impact', 'Arial Black', sans-serif; font-weight: 700; }
+    </style>
+  </defs>
+  <circle cx="400" cy="400" r="390" class="ring" />
+  <circle cx="400" cy="400" r="350" class="bg" />
+  <circle cx="400" cy="400" r="260" class="ring" />
+  <circle cx="400" cy="400" r="225" class="bg" />
+
+  <!-- Text arcs (approximate placement) -->
+  <text class="text" font-size="90" x="400" y="145" text-anchor="middle" letter-spacing="4">GOLD'S</text>
+  <text class="text" font-size="90" x="400" y="705" text-anchor="middle" letter-spacing="4">GYM</text>
+
+  <!-- Strongman silhouette -->
+  <g transform="translate(400 400) scale(1.05)" fill="#000">
+    <path d="M-20 -200 h40 l10 60 -60 0 z" />
+    <path d="M-30 -140 h60 l15 80 -90 0z" />
+    <path d="M-70 -60 h140 l-10 70 h-120z" />
+    <path d="M-60 10 h120 l-10 70 h-100z" />
+    <path d="M-40 80 h80 l-10 90 h-60z" />
+    <path d="M-25 170 h50 l-8 70 h-34z" />
+  </g>
+</svg>

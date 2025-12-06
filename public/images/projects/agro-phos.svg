@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="480" viewBox="0 0 800 480" role="img" aria-labelledby="title desc">
+  <title id="title">Agro Phos logo</title>
+  <desc id="desc">Simplified vector recreation of the Agro Phos logo</desc>
+  <rect width="800" height="480" fill="white" />
+  <g transform="translate(0,10)">
+    <!-- Green outer shape -->
+    <path d="M400 60c-110 0-200 78-200 174 0 62 33 118 84 150 0 0 12 8 28 3 14-5 25-23 19-42-9-28-16-59-16-89 0-79 56-142 125-142s125 63 125 142c0 30-7 61-16 89-6 19 5 37 19 42 16 5 28-3 28-3 51-32 84-88 84-150C680 138 590 60 480 60Z" fill="#0a8f46" />
+    <!-- White inner cutout -->
+    <path d="M400 118c-64 0-116 49-116 110 0 31 13 61 36 84 0 0 10 10 24 6 12-3 20-16 16-30-5-19-8-39-8-60 0-52 36-94 80-94s80 42 80 94c0 21-3 41-8 60-4 14 4 27 16 30 14 4 24-6 24-6 23-23 36-53 36-84 0-61-52-110-116-110Z" fill="white" />
+    <!-- Red letter a -->
+    <text x="380" y="235" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="160" fill="#d3222a">a</text>
+  </g>
+  <!-- Red text -->
+  <text x="220" y="390" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="86" fill="#d3222a">Agro Phos</text>
+</svg>

@@ -31,12 +31,12 @@ export default function Home() {
               background: 'radial-gradient(circle,rgba(217, 98, 149, 1) 0%, rgba(30, 100, 186, 1) 100%);',
             }}
           >
-            <Link
+            {/* <Link
               href="/enquiry"
               className="block py-2 px-2 rounded hover:bg-white hover:text-black transition"
             >
               Enquiry
-            </Link>
+            </Link> */}
             <Link
               href="/contact"
               className="block py-2 px-2 rounded hover:bg-white hover:text-black transition"

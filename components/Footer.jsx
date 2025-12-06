@@ -6,7 +6,7 @@ export default function Footer() {
     <footer
       className="text-white border-t border-white/30"
       style={{
-        background: "radial-gradient(circle,rgba(99, 124, 224, 1) 0%, rgba(130, 180, 237, 1) 100%);",
+        background: "radial-gradient(circle,rgba(99, 124, 224, 1) 0%, rgba(130, 180, 237, 1) 100%)",
         zIndex: 10,
       }}
     >
@@ -35,10 +35,9 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4">Our Services</h4>
             <ul className="space-y-2">
-              <li><Link href="/services/buying" className="text-white/80 hover:text-white transition duration-300">Buying</Link></li>
-              <li><Link href="/services/selling" className="text-white/80 hover:text-white transition duration-300">Selling</Link></li>
-              <li><Link href="/services/renting" className="text-white/80 hover:text-white transition duration-300">Renting</Link></li>
-              <li><Link href="/services/investment" className="text-white/80 hover:text-white transition duration-300">Investment</Link></li>
+              <li><Link href="/services/buying-selling" className="text-white/80 hover:text-white transition duration-300">Buying</Link></li>
+              <li><Link href="/services/buying-selling" className="text-white/80 hover:text-white transition duration-300">Renting</Link></li>
+              <li><Link href="/services/buying-selling" className="text-white/80 hover:text-white transition duration-300">Investment</Link></li>
             </ul>
           </div>
 
@@ -48,7 +47,7 @@ export default function Footer() {
             <ul className="space-y-2 text-white/80 mb-6">
               <li>13-e, Tulsi Nagar Rd, Tulsi Nagar, Mahalaxmi Nagar</li>
               <li>Indore, Madhya Pradesh 452010</li>
-              <li>Phone: (123) 456-7890</li>
+              <li>Phone: 7898048917</li>
               <li>Email: blueoceanbuildingsolutions@gmail.com</li>
             </ul>
             <div className="w-full h-48 rounded-md overflow-hidden shadow-lg border border-white/30">

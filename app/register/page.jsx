@@ -9,16 +9,54 @@ export default function Register() {
     affiliated: '',
     certified: '',
   })
+  const [status, setStatus] = useState('')
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
   const handleChange = (e) => {
     const { name, value } = e.target
     setForm({ ...form, [name]: value })
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    // Handle form submission (API call or validation)
-    alert('Registration submitted!')
+    setIsSubmitting(true)
+    setStatus('')
+
+    try {
+      const response = await fetch('/api/register', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          phone: form.mobile,
+          propertyType: 'Registration',
+          location: form.affiliated || 'N/A',
+          budget: 'N/A',
+          message: `Certified: ${form.certified}`,
+        }),
+      })
+
+      if (response.ok) {
+        setStatus('success')
+        setForm({
+          name: '',
+          mobile: '',
+          email: '',
+          affiliated: '',
+          certified: '',
+        })
+      } else {
+        setStatus('error')
+      }
+    } catch (error) {
+      console.error('Registration error:', error)
+      setStatus('error')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -104,11 +142,25 @@ export default function Register() {
               </label>
             </div>
           </div>
+          
+          {status === 'success' && (
+            <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-xl text-sm">
+              Registration successful! We'll contact you soon.
+            </div>
+          )}
+          
+          {status === 'error' && (
+            <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-xl text-sm">
+              Registration failed. Please try again or contact us directly.
+            </div>
+          )}
+
           <button
             type="submit"
-            className="w-full bg-gradient-to-r from-[#729FF2] to-[#2B477B] text-white py-2 rounded-xl font-bold text-base shadow-lg hover:from-[#4a7bd4] hover:to-[#1d2e4a] transition-all duration-200"
+            disabled={isSubmitting}
+            className="w-full bg-gradient-to-r from-[#729FF2] to-[#2B477B] text-white py-2 rounded-xl font-bold text-base shadow-lg hover:from-[#4a7bd4] hover:to-[#1d2e4a] transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            Register
+            {isSubmitting ? 'Submitting...' : 'Register'}
           </button>
         </form>
       </div>
