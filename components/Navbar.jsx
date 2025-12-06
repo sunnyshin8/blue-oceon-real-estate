@@ -15,8 +15,10 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-16">
           {/* Left: Logo */}
           <div className="flex items-center">
-            <Image src="/images/logo.png" alt="RealEstate" width={100} height={100} className="mr-2" />
-            <span className="text-2xl font-bold text-white">RealEstate</span>
+            <Image src="/images/logo.png" alt="Blue Ocean Building Solutions" width={100} height={100} className="mr-2" />
+            <Link href="/" className="text-2xl font-bold text-white hover:text-gray-200 transition duration-300">
+              Blue Ocean Building Solutions
+            </Link>
           </div>
 
           {/* Center: Navigation Links */}

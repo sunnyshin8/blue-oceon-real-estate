@@ -14,7 +14,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Brand */}
           <div>
-            <h3 className="text-2xl font-bold mb-4">RealEstate</h3>
+            <h3 className="text-2xl font-bold mb-4">Blue Ocean Building Solutions</h3>
             <p className="text-white/80">
               Your trusted partner in finding the perfect property. Helping families and investors make smart choices.
             </p>
@@ -66,7 +66,7 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="border-t border-white/30 mt-12 pt-6 text-center text-white/70 text-sm">
-          <p>&copy; {new Date().getFullYear()} RealEstate. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Blue Ocean Building Solutions. All rights reserved.</p>
         </div>
       </div>
     </footer>
