@@ -31,7 +31,7 @@ export default function BlogPost() {
         <div className="max-w-4xl mx-auto">
           <div className="relative h-96 w-full rounded-lg overflow-hidden shadow-lg">
             <Image
-              src="/images/blog4.jpg"
+              src="/images/blog4.png"
               alt="Indian Real Estate"
               fill
               className="object-cover"

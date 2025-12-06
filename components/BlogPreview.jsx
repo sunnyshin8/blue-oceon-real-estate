@@ -6,7 +6,7 @@ export default function BlogPreview() {
     {
       title: 'The Future of Indian Real Estate: Challenges, Reforms, and the Road to a $1 Trillion Market',
       excerpt: 'India\'s real estate sector is booming but fragmented. Discover what\'s driving its growth, what challenges persist, and how innovation and regulation are reshaping the landscape.',
-      image: '/images/blog4.jpg',
+      image: '/images/blog4.png',
       date: 'December 6, 2025',
       category: 'Market Analysis',
     },
