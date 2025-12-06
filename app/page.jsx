@@ -63,8 +63,24 @@ export default function Home() {
       <ServicesSection />
       <AboutSection />
       <Aboutus />
-      <ProjectShowcase />
-      <BlogPreview />
+      
+      {/* Our Projects Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-gray-900 mb-4 text-center">Our Projects</h2>
+          <p className="text-lg text-gray-600 mb-12 text-center">We have worked with</p>
+          <ProjectShowcase />
+        </div>
+      </section>
+
+      {/* Our Blog Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">Our Blog</h2>
+          <BlogPreview />
+        </div>
+      </section>
+
       <InquireForm />
     </div>
   )

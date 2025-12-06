@@ -11,19 +11,50 @@ export default function InquireForm() {
     message: '',
   })
 
-  const handleSubmit = (e) => {
+  const [status, setStatus] = useState('')
+  const [isSubmitting, setIsSubmitting] = useState(false)
+
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    // Handle form submission here
-    console.log('Inquiry submitted:', formData)
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      propertyType: '',
-      budget: '',
-      message: '',
-    })
+    setIsSubmitting(true)
+    setStatus('')
+
+    try {
+      const response = await fetch('/api/register', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          propertyType: formData.propertyType,
+          location: 'N/A',
+          budget: formData.budget,
+          message: formData.message || 'No additional information provided',
+        }),
+      })
+
+      if (response.ok) {
+        setStatus('success')
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          propertyType: '',
+          budget: '',
+          message: '',
+        })
+      } else {
+        setStatus('error')
+      }
+    } catch (error) {
+      console.error('Inquiry submission error:', error)
+      setStatus('error')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleChange = (e) => {
@@ -148,12 +179,25 @@ export default function InquireForm() {
             </div>
           </div>
 
+          {status === 'success' && (
+            <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mt-6">
+              Inquiry submitted successfully! We'll contact you soon.
+            </div>
+          )}
+          
+          {status === 'error' && (
+            <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mt-6">
+              Failed to submit inquiry. Please try again or contact us directly.
+            </div>
+          )}
+
           <div className="mt-6">
             <button
               type="submit"
-              className="w-full bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition-colors"
+              disabled={isSubmitting}
+              className="w-full bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              Submit Inquiry
+              {isSubmitting ? 'Submitting...' : 'Submit Inquiry'}
             </button>
           </div>
         </form>
