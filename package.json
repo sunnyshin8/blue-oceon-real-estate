@@ -11,7 +11,7 @@
   "dependencies": {
     "framer-motion": "^12.18.1",
     "ionicons": "^8.0.9",
-    "next": "^15.5.7",
+    "next": "15.5.9",
     "nodemailer": "^7.0.11",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
